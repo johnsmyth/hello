@@ -14,7 +14,3 @@ zip {
   output_path = "./dist/hello_macos.zip"
 }
 
-dmg {
-  output_path = "./dist/hello_macos.dmg"
-  volume_name = "hello"
-}

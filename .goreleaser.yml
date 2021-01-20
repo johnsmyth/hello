@@ -19,8 +19,8 @@ archives:
   - files:
     - none*
     format: zip
-    #name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
-    name_template: "hello_macos"
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+    #name_template: "hello_macos"
 
 # checksum:
 #   name_template: 'checksums.txt'
@@ -28,6 +28,8 @@ archives:
 release:
   # Visit your project's GitHub Releases page to publish this release.
   draft: true
+  ids:
+    - none
   extra_files:
     - glob: ./dist/hello_macos.zip
 

@@ -20,11 +20,39 @@ archives:
     - none*
     format: zip
     name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
-tap:
-    owner: johnsmyth
-    name: homebrew-tap
-    # Optionally a token can be provided, if it differs from the token provided to GoReleaser
-    token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
+
+checksum:
+  name_template: 'checksums.txt'
+release:
+  # Visit your project's GitHub Releases page to publish this release.
+  draft: false
+changelog:
+  skip: true
+
+brews:
+  - 
+    # Name template of the recipe
+    # Default to project name
+    # name: myproject
+
+    # IDs of the archives to use.
+    # Defaults to all.
+    # ids:
+    # - hello
+
+    # GOARM to specify which 32-bit arm version to use if there are multiple versions
+    # from the build section. Brew formulas support atm only one 32-bit version.
+    # Default is 6 for all artifacts or each id if there a multiple versions.
+    # goarm: 6
+
+    # NOTE: make sure the url_template, the token and given repo (github or gitlab) owner and name are from the
+    # same kind. We will probably unify this in the next major version like it is done with scoop.
+
+    tap:
+      owner: johnsmyth
+      name: homebrew-tap
+      # Optionally a token can be provided, if it differs from the token provided to GoReleaser
+      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
 
     # Template for the url which is determined by the given Token (github or gitlab)
     # Default for github is "https://github.com/<repo_owner>/<repo_name>/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
@@ -111,10 +139,3 @@ tap:
     install: |
       bin.install "hello"
 
-checksum:
-  name_template: 'checksums.txt'
-release:
-  # Visit your project's GitHub Releases page to publish this release.
-  draft: false
-changelog:
-  skip: true

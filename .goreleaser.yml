@@ -35,7 +35,7 @@ changelog:
   skip: true
 
 signs:
-  - #signature: "${artifact}_macos.dmg"
+  #- signature: "${artifact}_macos.dmg"
   - signature: "checksums.txt"
     ids:
       - macos

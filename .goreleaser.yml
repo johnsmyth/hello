@@ -27,15 +27,15 @@ checksum:
 release:
   # Visit your project's GitHub Releases page to publish this release.
   draft: true
-  # extra_files:
-  #   - glob: ./dist/hello_macos.dmg
-  #   - glob: ./dist/hello_macos.zip
+  extra_files:
+    - glob: ./dist/hello_macos.dmg
+    - glob: ./dist/hello_macos.zip
 
 changelog:
   skip: true
 
 signs:
-  - signature: "${artifact}_macos.dmg"
+  - #signature: "${artifact}_macos.dmg"
     ids:
       - macos
     cmd: gon

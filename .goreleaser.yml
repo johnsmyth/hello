@@ -75,7 +75,7 @@ brews:
     # Default for gitlab is "https://gitlab.com/<repo_owner>/<repo_name>/uploads/{{ .ArtifactUploadHash }}/{{ .ArtifactName }}"
     # Default for gitea is "https://gitea.com/<repo_owner>/<repo_name>/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
     # url_template: "http://github.mycompany.com/foo/bar/releases/{{ .Tag }}/{{ .ArtifactName }}"
-      url_template: "https://github.com/johnsmyth/hello/releases/download/{{ .Tag }}/hello_macos.zip"
+    url_template: "https://github.com/johnsmyth/hello/releases/download/{{ .Tag }}/hello_macos.zip"
 
     # Allows you to set a custom download strategy. Note that you'll need
     # to implement the strategy and add it to your tap repository.

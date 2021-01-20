@@ -23,13 +23,13 @@ archives:
 
 checksum:
   name_template: 'checksums.txt'
-  
+
 release:
   # Visit your project's GitHub Releases page to publish this release.
-  draft: false
-  extra_files:
-    - glob: ./dist/hello_macos.dmg
-    - glob: ./dist/hello_macos.zip
+  draft: true
+  # extra_files:
+  #   - glob: ./dist/hello_macos.dmg
+  #   - glob: ./dist/hello_macos.zip
 
 changelog:
   skip: true

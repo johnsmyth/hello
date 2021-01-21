@@ -22,12 +22,14 @@ archives:
     name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
     #name_template: "hello_macos"
 
-# checksum:
-#   name_template: 'checksums.txt'
+checksum:
+  name_template: 'checksums.txt'
+  ids: 
+    - none
 
 release:
   # Visit your project's GitHub Releases page to publish this release.
-  draft: true
+  #draft: true
   ids:
     - none
   extra_files:

@@ -30,8 +30,8 @@ checksum:
 release:
   # Visit your project's GitHub Releases page to publish this release.
   # draft: true
-  ids: hello
-    - 
+  ids: 
+    - hello
   #  - none
   #extra_files:
   #  - glob: ./dist/hello_macos.zip
